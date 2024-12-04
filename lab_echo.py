@@ -12,7 +12,7 @@ gr =plt.figure(0)
 
 def generate_graph(n) -> nx.Graph:
     G = nx.empty_graph(0)
-    G = nx.fast_gnp_random_graph(n, 0.38, seed=None, directed=False)
+    G = nx.fast_gnp_random_graph(n, 0.12, seed=None, directed=False)
     
     G.remove_nodes_from(list(nx.isolates(G)))
     pos = nx.arf_layout(G)
